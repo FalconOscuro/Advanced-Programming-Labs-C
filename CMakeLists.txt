@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.16)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/build/bin")
 
 # Lab files
+add_executable(FileIO ${CMAKE_SOURCE_DIR}/01-FileIO/FileIO.cpp)
+configure_file(${CMAKE_SOURCE_DIR}/01-FileIO/input.txt ${CMAKE_RUNTIME_OUTPUT_DIRECTORY} COPYONLY)
 
 # Lab Book using LaTeX
 find_package(LATEX)

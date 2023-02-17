@@ -1,0 +1,37 @@
+\documentclass[Lab-C.tex]{subfiles}
+
+\begin{document}
+    \section{Copy}
+        \subsection*{Question:}
+        Complete the functionality inside of the \mintinline{cpp}{Copy(char filenamein[], char filenameout[])} function. 
+        You need to add code that will try to open a text file given by the \mintinline{cpp}{filenamein} array as the name of the input file. 
+        You need to add code to create and output file using the \mintinline{cpp}{filenameout} array as the name of the ouput file. 
+        Then you can add code that will take each \textit{char} from the input file and put it in the output file.
+            
+        \subsection*{Solution:}
+            \inputminted{cpp}{../02-Copy/Copy.cpp}%CPP file path here
+
+        \subsection*{Test Data:}
+            The program was tested with several scenarios:
+            \begin{itemize}
+                \item \textbf{Basic Input}:\\
+                    The program was tested with the provided \textit{input.txt} file
+                    all text was successfully copied to the newly created \textit{output.txt} file.
+                
+                \item \textbf{No Input File}:\\
+                    If the \textit{input.txt} cannot be found, execution terminates.
+                    
+                \item \textbf{Blank File}:\\
+                    Copying succeeds even if the file is empty.
+            \end{itemize}
+        
+        \subsection*{Sample Output:}
+            All data is output to the \textit{output.txt} file.
+
+        \subsection*{Reflection:}
+            There is another scenario where the file is too large to copy, this is handled
+            if not enough memory can be allocated, but there is still unexpected behaviour if there are
+            more characters than countable by a 64 bit unsigned integer, but since that is over
+            18 exabytes, larger than the estimated size of the internet, 
+            I don't think this will become an issue anytime soon.
+\end{document}

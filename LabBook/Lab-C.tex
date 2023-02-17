@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage{subfiles}
+\usepackage{float}
+
+\usepackage[outputdir=../build/tex]{minted}
+\usemintedstyle{vs}
+\definecolor{bg}{rgb}{0.95, 0.95, 0.95}
+\setminted{
+    linenos,
+    bgcolor=bg,
+    fontsize=\scriptsize,
+    frame=lines,
+    framesep=2mm,
+    autogobble,
+    breaklines
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=cyan
+}
+\urlstyle{same}
+
+\title{%
+    500083 Lab Book \\
+    \large Week 2 - Lab B
+    }
+
+\author{Peter Garrod}
+
+% Comments!
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \newpage
+    \subfile{01-GoodStreaming.tex}
+    \newpage
+    \subfile{02-BadStreaming.tex}
+    \newpage
+    \subfile{03-Assembly.tex}
+
+\end{document}

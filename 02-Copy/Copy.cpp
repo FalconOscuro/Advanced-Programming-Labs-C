@@ -2,12 +2,6 @@
 #include <fstream>
 using namespace std;
 
-/*
-* Partially completed program
-* The program should copy a text file
-*
-*/
-
 bool Copy(char filenamein[], char filenameout[])
 {
 	// ----- Read -----

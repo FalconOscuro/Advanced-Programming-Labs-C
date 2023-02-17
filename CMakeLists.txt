@@ -8,6 +8,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/build/bin")
 # Lab files
 add_executable(FileIO ${CMAKE_SOURCE_DIR}/01-FileIO/FileIO.cpp)
 configure_file(${CMAKE_SOURCE_DIR}/01-FileIO/input.txt ${CMAKE_RUNTIME_OUTPUT_DIRECTORY} COPYONLY)
+add_executable(Copy ${CMAKE_SOURCE_DIR}/02-Copy/Copy.cpp)
+
+option(BUILD_LABBOOK "Build the labbook" OFF)
 
 # Lab Book using LaTeX
 find_package(LATEX)
@@ -15,7 +18,7 @@ set(LT_OUT_DIR "${CMAKE_BINARY_DIR}/build/tex")
 set(LT_WORKING_DIR "${CMAKE_SOURCE_DIR}/LabBook")
 set(MAIN_TEX "${LT_WORKING_DIR}/Lab-C.tex")
 
-if(LATEX_FOUND AND LATEX_PDFLATEX_FOUND)
+if(LATEX_FOUND AND LATEX_PDFLATEX_FOUND AND BUILD_LABBOOK)
     file(MAKE_DIRECTORY ${LT_OUT_DIR})
 
     # First Pass

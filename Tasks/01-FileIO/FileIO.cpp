@@ -2,12 +2,8 @@
 #include <fstream>
 using namespace std;
 
-/*
-* Partially completed program
-* The program should copy a text file
-*
-*/
-
+// Partially completed program
+// The program should copy a text file
 bool Copy(char filenamein[], char filenameout[])
 {
 	return false;
@@ -22,13 +18,10 @@ int main(int argn, char* argv[])
 	}
 
 	if (Copy(argv[1], argv[2]))
-	{
 		cout << "Copy successful" << endl;
-	}
+
 	else
-	{
 		cout << "Copy error" << endl;
-	}
 
 	system("PAUSE");
 }

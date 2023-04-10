@@ -1,28 +1,23 @@
-\documentclass[Lab-C.tex]{subfiles}
 % TODO: Add Ghidra Screenshots
-
-\begin{document}
-    \section{Functions}
-        \subsection{Question}
-            Decompile and investigate the effect of functions on assembly code.
+\section{Functions}
+    \subsection*{Question}
+        Decompile and investigate the effect of functions on assembly code.
             
-        \subsection{Test Data}
-            None available.
+    \subsection*{Test Data}
+        None available.
         
-        \subsection{Sample Output}
-            None available.
+    \subsection*{Sample Output}
+        None available.
 
-        \subsection{Reflection}
-            Each function argument has its type, register position and copy position relative to the frame pointer register.
-            Before a function call, these are placed into a set of buffer registers and then from the buffer registers
-            to the relative copy positions at the start of the function. 
-            Function logic is then executed until the function ends, where the frame pointer is popped
-            returning the program normal execution.
+    \subsection*{Reflection}
+        Each function argument has its type, register position and copy position relative to the frame pointer register.
+        Before a function call, these are placed into a set of buffer registers and then from the buffer registers
+        to the relative copy positions at the start of the function. 
+        Function logic is then executed until the function ends, where the frame pointer is popped
+        returning the program normal execution.
         
-        \subsection{Solution}
-            \begin{listing}[H]
-                \inputminted[firstline=4, lastline=29]{cpp}{../Tasks/03-Functions/Functions.cpp}%CPP file path here
-                \caption{Functions.cpp}
-            \end{listing}
-
-\end{document}
+    \subsection*{Solution}
+        \begin{listing}[H]
+            \inputminted[firstline=4, lastline=29]{cpp}{../Tasks/03-Functions/Functions.cpp}%CPP file path here
+            \caption{Functions.cpp}
+        \end{listing}
